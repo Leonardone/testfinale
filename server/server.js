@@ -1,8 +1,13 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var bodyparser = require('body-parser')
 
 const PORT = 3000;
+
+
+app.use(bodyparser.json());
+
 
 
 app.get('/', function(req, res){
@@ -18,5 +23,6 @@ app.use('/users', utenti);
 app.listen(PORT, function(){
                 console.log('server start at http://localhost:' + PORT);
                             });
+                          
 
 
